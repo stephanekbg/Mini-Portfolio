@@ -19,14 +19,16 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="CSS/styles.css" />
+    <script src="/JS/script.js" defer></script>
   </head>
   <body>
     <header>
       <!-- TOP: TITLE + DESCRIPTION -->
       <div class="header-top">
         <h1>My Portfolio</h1>
-        <p>
+        <em>
           une compression d'experience a presenter pour ce projet d'admission
+        </em>
         </p>
       </div>
 
@@ -240,7 +242,53 @@
           évolution en tant que développeur.
         </p>
       </section>
-      <section id="contact" class="section-card"></section>
+      <section id="contact" class="section-card">
+        <h2>Contact</h2>
+
+        <form id="contactForm">
+          <h3>Informations personnelles</h3>
+
+          <div class="form-grid">
+            <input type="text" name="prenom" placeholder="Prénom" required />
+            <input type="text" name="nom" placeholder="Nom" required />
+
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="text" name="adresse" placeholder="Adresse" required />
+
+            <input type="tel" name="tel" placeholder="Téléphone" required />
+            <input
+              type="text"
+              name="instagram"
+              placeholder="Instagram (ex: @tonpseudo)"
+            />
+          </div>
+
+          <h3>Genre</h3>
+
+          <div class="gender">
+            <label
+              ><input type="radio" name="gender" value="male" /> Male</label
+            >
+            <label
+              ><input type="radio" name="gender" value="female" /> Female</label
+            >
+            <label
+              ><input type="radio" name="gender" value="non-binary" />
+              Non-binary</label
+            >
+          </div>
+          <h3>Parlez de vous</h3>
+
+          <textarea
+            name="message"
+            placeholder="Décris-toi en quelques mots : ton parcours, tes intérêts, tes objectifs ou ce que tu aimerais partager..."
+          ></textarea>
+
+          <button type="submit">Envoyer</button>
+
+          <p id="successMessage"></p>
+        </form>
+      </section>
     </main>
     <!-- FOOTER -->
     <footer>

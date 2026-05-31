@@ -59,7 +59,7 @@ header {
   margin-top: 25px;
 }
 
-.header-top p {
+.header-top em {
   color: gray;
 }
 
@@ -428,6 +428,127 @@ section {
 /* make title stronger h2 on hover */
 #experience:hover h2 {
   filter: brightness(1.2);
+}
+
+/* FORM LAYOUT */
+form {
+  margin-top: 20px;
+}
+
+/* GRID INPUTS */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* INPUT STYLE */
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(181, 126, 220, 0.3);
+
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+
+  transition: 0.3s ease;
+}
+
+/* INPUT FOCUS */
+input:focus {
+  outline: none;
+  border-color: var(--violet);
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.4);
+}
+
+/* PLACEHOLDER COLOR */
+input::placeholder {
+  color: gray;
+}
+
+/* H3 STYLE */
+#contact h3 {
+  margin: 20px 0 10px;
+  color: var(--violet);
+}
+
+/* GENDER SECTION */
+.gender {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.gender label {
+  color: white;
+}
+
+/* BUTTON */
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+
+  background: var(--violet);
+  color: white;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: var(--light-violet);
+  transform: translateY(-2px);
+}
+
+/* SUCCESS MESSAGE */
+#successMessage {
+  margin-top: 15px;
+  color: #00ffb3;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gender {
+    flex-direction: column;
+  }
+}
+
+/* TEXTAREA STYLE */
+textarea {
+  width: 100%;
+  min-height: 120px;
+
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+
+  border: 1px solid rgba(181, 126, 220, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+
+  color: white;
+
+  resize: none;
+
+  transition: 0.3s ease;
+}
+
+/* FOCUS EFFECT */
+textarea:focus {
+  outline: none;
+  border-color: var(--violet);
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.4);
+}
+
+/* PLACEHOLDER STYLE */
+textarea::placeholder {
+  color: gray;
+  font-style: italic;
 }
 
 /* FOOTER */
